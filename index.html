@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Chamados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Chamados</h1>
+        <p>Consulta e filtros de chamados</p>
+    </header>
+
+    <main>
+        <section class="filtros">
+            <div class="campo">
+                <label for="pesquisa">Pesquisar por nome</label>
+                <input
+                    type="text"
+                    id="pesquisa"
+                    placeholder="Digite o nome do usuário"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="prioridade">Prioridade</label>
+                <select id="prioridade">
+                    <option value="">Todas</option>
+                    <option value="Crítica">Crítica</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Média">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="">Todos</option>
+                    <option value="Aberto">Aberto</option>
+                    <option value="Em progresso">Em progresso</option>
+                    <option value="Fechado">Fechado</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="ordenacao">Prioridade de status</label>
+                <select id="ordenacao">
+                    <option value="">Sem ordenação</option>
+                    <option value="prioridade">Prioridade</option>
+                    <option value="status">Status</option>
+                </select>
+            </div>
+
+            <button id="limpar">Limpar filtros</button>
+        </section>
+
+        <p id="resultado" class="resultado"></p>
+
+        <section id="cards" class="cards"></section>
+    </main>
+
+    <script src="chamados.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
